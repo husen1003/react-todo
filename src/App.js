@@ -3,6 +3,7 @@ import firebase from 'firebase';
 import Todo from './Todo';
 import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import db from './firebase'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -31,7 +32,9 @@ function App() {
   return (
     <div className="App">
       <center>
+        <br />
         <h1>Todo App</h1>
+        <br />
         <form>
           <FormControl>
             <InputLabel>Todo</InputLabel>
@@ -40,6 +43,7 @@ function App() {
 
           <Button type="submit" onClick={addTodo} variant="contained" color="primary" disabled={!input} >Add todo</Button>
         </form>
+        <br />
         <ul>
           {todos.map(todo => (
             <Todo todo={todo} />

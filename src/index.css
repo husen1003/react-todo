@@ -10,7 +10,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .todo_list {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .todo_list {
+    width: 50%;
+  }
 }
